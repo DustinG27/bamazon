@@ -82,12 +82,12 @@ function start() {
                   connection.query(
                     "UPDATE products SET stock_quantity = " +
                       newQuantity +
-                      " WHERE id = " +
+                      " WHERE item_id = " +
                       res[0].item_id,
                     function (err, resUpdate) {
                       if (err) throw err;
                       console.log(" ");
-                      console.log("Your oder has been processed.\n Thank you for shopping" )
+                      console.log("Your order has been processed.\n Thank you for shopping" )
                       connection.end();
                     
                     }
